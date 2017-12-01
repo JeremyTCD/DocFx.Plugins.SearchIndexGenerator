@@ -1,6 +1,5 @@
 ﻿namespace JeremyTCD.DocFx.Plugins.SearchIndexGenerator
 {
-    using HtmlAgilityPack;
     using Newtonsoft.Json;
 
     public class SearchIndexItem
@@ -19,7 +18,7 @@
 
         public override bool Equals(object obj)
         {
-            return this.Equals(obj as SearchIndexItem);
+            return Equals(obj as SearchIndexItem);
         }
 
         public bool Equals(SearchIndexItem other)
@@ -32,9 +31,9 @@
             {
                 return true;
             }
-            return string.Equals(this.SnippetHtml, other.SnippetHtml) && 
-                string.Equals(this.RelPath, other.RelPath) && 
-                string.Equals(this.Text, other.Text);
+            return string.Equals(SnippetHtml, other.SnippetHtml) && 
+                string.Equals(RelPath, other.RelPath) && 
+                string.Equals(Text, other.Text);
         }
 
         public override int GetHashCode()
