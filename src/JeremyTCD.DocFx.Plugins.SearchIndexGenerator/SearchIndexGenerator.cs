@@ -18,14 +18,10 @@ namespace JeremyTCD.DocFx.Plugins.SearchIndexGenerator
     public class SearchIndexGenerator : IPostProcessor
     {
         private static readonly Regex RegexWhiteSpace = new Regex(@"\s+", RegexOptions.Compiled);
-        private int SearchIndexSnippetLength;
 
         public ImmutableDictionary<string, object> PrepareMetadata(ImmutableDictionary<string, object> metadata)
         {
-            object length = null;
-            metadata.TryGetValue(SearchIndexConstants.SearchIndexSnippetLengthKey, out length);
-            SearchIndexSnippetLength = length as int? ?? SearchIndexConstants.DefaultArticleSnippetLength;
-
+            // Do nothing
             return metadata;
         }
 
@@ -89,7 +85,10 @@ namespace JeremyTCD.DocFx.Plugins.SearchIndexGenerator
                 ExtractTextFromNode(articleNode, stringBuilder);
                 string text = NormalizeNodeText(stringBuilder.ToString());
 
-                HtmlNode snippet = SnippetCreator.CreateSnippet(articleNode, relPath, SearchIndexSnippetLength);
+                manifestItem.Metadata.TryGetValue(SearchIndexConstants.SearchIndexSnippetLengthKey, out object length);
+                int searchIndexSnippetLength = length as int? ?? SearchIndexConstants.DefaultArticleSnippetLength;
+
+                HtmlNode snippet = SnippetCreator.CreateSnippet(articleNode, relPath, searchIndexSnippetLength);
 
                 SearchIndexItems.Add(relPath, new SearchIndexItem
                 {
