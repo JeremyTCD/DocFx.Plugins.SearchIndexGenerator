@@ -77,9 +77,8 @@ namespace JeremyTCD.DocFx.Plugins.SearchIndexGenerator
                     continue;
                 }
 
-                object includeInSearchIndex = null;
-                manifestItem.Metadata.TryGetValue(SearchIndexConstants.IncludeInSearchIndexKey, out includeInSearchIndex);
-                if (includeInSearchIndex as bool? != true)
+                manifestItem.Metadata.TryGetValue(SearchIndexConstants.IncludeInSearchIndexKey, out object includeInSearchIndex);
+                if (includeInSearchIndex as bool? == false)
                 {
                     continue;
                 }
