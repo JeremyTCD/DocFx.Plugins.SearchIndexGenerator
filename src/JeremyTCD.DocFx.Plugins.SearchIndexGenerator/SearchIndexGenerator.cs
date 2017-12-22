@@ -72,6 +72,11 @@ namespace JeremyTCD.DocFx.Plugins.SearchIndexGenerator
 
             foreach (ManifestItem manifestItem in manifest.Files)
             {
+                if(manifestItem.DocumentType != "Conceptual")
+                {
+                    continue;
+                }
+
                 object includeInSearchIndex = null;
                 manifestItem.Metadata.TryGetValue(SearchIndexConstants.IncludeInSearchIndexKey, out includeInSearchIndex);
                 if (includeInSearchIndex as bool? != true)
