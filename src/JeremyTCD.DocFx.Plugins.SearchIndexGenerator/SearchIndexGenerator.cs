@@ -114,6 +114,12 @@ namespace JeremyTCD.DocFx.Plugins.SearchIndexGenerator
 
         private void ExtractTextFromNode(HtmlNode node, StringBuilder stringBuilder)
         {
+            // Note: Article's title is included separately in SearchIndexItem.Title
+            if(node.Name == "h1")
+            {
+                return;
+            }
+
             if (!node.HasChildNodes)
             {
                 stringBuilder.Append(node.InnerText);
