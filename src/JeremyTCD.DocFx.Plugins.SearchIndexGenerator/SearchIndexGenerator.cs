@@ -95,7 +95,7 @@ namespace JeremyTCD.DocFx.Plugins.SearchIndexGenerator
                     RelPath = relPath,
                     SnippetHtml = snippet.OuterHtml,
                     Text = text,
-                    Title = snippet.SelectSingleNode("./h1/a").InnerText
+                    Title = snippet.SelectSingleNode(".//div[contains(@class, 'title')]/a").InnerText
                 });
             }
 
