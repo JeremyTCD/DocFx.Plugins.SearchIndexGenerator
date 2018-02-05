@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2010
+VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JeremyTCD.DocFx.Plugins.SearchIndexGenerator", "src\JeremyTCD.DocFx.Plugins.SearchIndexGenerator\JeremyTCD.DocFx.Plugins.SearchIndexGenerator.csproj", "{F1F3B25D-B229-4B22-B2FB-4A840D89863F}"
 EndProject
