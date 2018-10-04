@@ -21,9 +21,9 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.Composition" Version="1.0.31" />
-        <PackageReference Include="Microsoft.DocAsCode.Build.Common" Version="2.39.2" />
-        <PackageReference Include="Microsoft.DocAsCode.Build.ConceptualDocuments" Version="2.39.2" />
+        <PackageReference Include="Microsoft.DocAsCode.Build.Common" Version="2.39.3" />
+        <PackageReference Include="Microsoft.DocAsCode.Build.ConceptualDocuments" Version="2.39.3" />
         <PackageReference Include="System.Collections.Immutable" Version="1.5.0" />
-        <PackageReference Include="JeremyTCD.DocFx.Plugins.Utils" Version="0.3.0" />
+        <PackageReference Include="JeremyTCD.DocFx.Plugins.Utils" Version="0.4.0" />
     </ItemGroup>
 </Project>
