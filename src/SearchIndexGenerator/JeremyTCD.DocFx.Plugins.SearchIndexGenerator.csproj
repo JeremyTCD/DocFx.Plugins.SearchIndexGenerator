@@ -8,7 +8,7 @@
         <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
         <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
         <Authors>JeremyTCD</Authors>
-        <Copyright>Copyright © JeremyTCD 2017</Copyright>
+        <Copyright>Copyright © JeremyTCD 2017-2018</Copyright>
         <PackageLicenseUrl>https://github.com/JeremyTCD/DocFx.Plugins.SearchIndexGenerator/blob/master/License.txt</PackageLicenseUrl>
         <PackageProjectUrl>https://github.com/JeremyTCD/DocFx.Plugins.SearchIndexGenerator</PackageProjectUrl>
         <RepositoryUrl>https://github.com/JeremyTCD/DocFx.Plugins.SearchIndexGenerator</RepositoryUrl>
